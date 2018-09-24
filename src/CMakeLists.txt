@@ -1,3 +1,5 @@
+add_subdirectory(util)
+
 add_executable(
     score_tabler
     main.cc
@@ -12,5 +14,6 @@ target_compile_features(
 target_link_libraries(
     score_tabler
     PRIVATE
+    util
     ${CONAN_LIBS}
 )
