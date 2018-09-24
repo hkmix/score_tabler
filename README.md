@@ -6,13 +6,14 @@ Designed for mahjong use, keeps tracks of scores and outputs to json.
 
 ## Building
 
-1. Source the included `env` script. This will configure `vcpkg` automatically.
+1. Install Conan if you don't already have it (requires Python):
 
-        $ source env
+        $ pip install --user conan
 
 1. Build out-of-tree with your preferred method. Example using `ninja`:
 
         $ mkdir build && cd build
+        build $ conan install ..
         build $ cmake .. -GNinja
         build $ ninja
 

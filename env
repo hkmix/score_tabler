@@ -1,9 +1,0 @@
-#!/bin/sh
-
-GIT_ROOT="$(git rev-parse --show-toplevel)"
-VCPKG="${GIT_ROOT}/vcpkg"
-
-git submodule update --init --recursive
-[ ! -f "$VCPKG/vcpkg" ] && ${VCPKG}/bootstrap-vcpkg.sh
-${VCPKG}/vcpkg list | grep -e '^nlohmann-json' >/dev/null 2>&1 || ${VCPKG}/vcpkg install nlohmann-json
-alias cmake="cmake -DCMAKE_TOOLCHAIN_FILE=\"${VCPKG}/scripts/buildsystems/vcpkg.cmake\""

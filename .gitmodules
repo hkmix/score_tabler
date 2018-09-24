@@ -1,4 +1,0 @@
-[submodule "vcpkg"]
-	ignore = dirty
-	path = vcpkg
-	url = git@github.com:Microsoft/vcpkg.git
